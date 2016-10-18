@@ -26,15 +26,15 @@
 
   "require": {
     "php": ">=5.4",
-    "stovak/json-schema": "^4.0",
+    "stovak/json-schema": "^3.0 || ^4.0",
     "symfony/yaml": "~2.6",
     "symfony/routing": "~2.5",
     "oodle/inflect": "~0.2"
   },
-  "repositories": [
-    {
+  "repositories": {
+    "stovak/json-schema": {
         "type": "vcs",
         "url": "https://github.com/stovak/json-schema.git"
     }
-  ],
+  },
 }
