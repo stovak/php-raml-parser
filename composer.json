@@ -34,7 +34,7 @@
   "repositories": {
     "stovak/json-schema": {
         "type": "vcs",
-        "url": "https://github.com/stovak/json-schema.git"
+        "url": "git@github.com:stovak/json-schema.git"
     }
   },
 }
