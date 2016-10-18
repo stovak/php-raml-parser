@@ -17,7 +17,7 @@
       "Raml\\": "src/"
     }
   },
-  
+
   "require-dev": {
     "satooshi/php-coveralls": "~0.6",
     "phpunit/phpunit": "4.*",
@@ -26,9 +26,15 @@
 
   "require": {
     "php": ">=5.4",
-    "stovak/json-schema": "~1.5",
+    "stovak/json-schema": "^4.0",
     "symfony/yaml": "~2.6",
     "symfony/routing": "~2.5",
     "oodle/inflect": "~0.2"
-  }
+  },
+  "repositories": [
+    {
+        "type": "vcs",
+        "url": "https://github.com/stovak/json-schema.git"
+    }
+  ],
 }
