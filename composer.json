@@ -31,10 +31,10 @@
     "symfony/routing": "~2.5",
     "oodle/inflect": "~0.2"
   },
-  "repositories": {
-    "stovak/json-schema": {
+  "repositories": [
+    {
         "type": "vcs",
         "url": "git@github.com:stovak/json-schema.git"
     }
-  },
+  ]
 }
