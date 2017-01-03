@@ -2,6 +2,7 @@
 namespace Raml;
 
 use Inflect\Inflect;
+use Raml\Config\ParseConfiguration;
 use Raml\Exception\BadParameter\FileNotFoundException;
 use Raml\Exception\InvalidSchemaTypeException;
 use Raml\Exception\RamlParserException;
@@ -202,7 +203,7 @@ class Parser
 
         $ramlData = $this->parseRamlString($ramlString, $rootDir);
 
-        return $this->parseRamlData($ramlData, $rootDir);
+      return $this->parseRamlData($ramlData, $rootDir);
     }
 
     /**
@@ -269,6 +270,9 @@ class Parser
         if (isset($ramlData['securitySchemes'])) {
             $ramlData['securitySchemes'] = $this->parseSecuritySettings($ramlData['securitySchemes']);
         }
+
+        $ramlData['configuration'] =& $this->configuration;
+
 
         return ApiDefinition::createFromArray($ramlData['title'], $ramlData);
     }

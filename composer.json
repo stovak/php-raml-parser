@@ -1,8 +1,8 @@
 {
-  "name": "stovak/php-raml-parser",
+  "name": "alecsammon/php-raml-parser",
   "type": "library",
   "description": "A RAML parser built in php",
-  "homepage": "https://github.com/stovak/php-raml-parser",
+  "homepage": "https://github.com/alecsammon/php-raml-parser",
   "license": "MIT",
 
   "authors": [
@@ -17,17 +17,18 @@
       "Raml\\": "src/"
     }
   },
+  
+  "require-dev": {
+    "satooshi/php-coveralls": "~0.6",
+    "phpunit/phpunit": "4.*",
+    "squizlabs/php_codesniffer": "@dev"
+  },
+
   "require": {
     "php": ">=5.4",
-    "stovak/json-schema": "^3.0 || ^4.0",
+    "justinrainbow/json-schema": "~1.5",
     "symfony/yaml": "~2.6",
     "symfony/routing": "~2.5",
     "oodle/inflect": "~0.2"
-  },
-  "repositories": [
-    {
-        "type": "vcs",
-        "url": "git@github.com:stovak/json-schema.git"
-    }
-  ]
+  }
 }
