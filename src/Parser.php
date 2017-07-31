@@ -492,7 +492,7 @@ class Parser
      */
     private function parseYaml($fileData)
     {
-        return Yaml::parse($fileData, true, true);
+        return Yaml::parse($fileData, Yaml::PARSE_EXCEPTION_ON_INVALID_TYPE & Yaml::PARSE_OBJECT);
     }
 
     /**
@@ -535,7 +535,7 @@ class Parser
 
             // RAML and YAML files are always parsed
             $fileData = $this->parseRamlString(
-                $fullPath,
+                file_get_contents($fullPath),
                 $rootDir
             );
             $fileData = $this->includeAndParseFiles($fileData, $rootDir);
